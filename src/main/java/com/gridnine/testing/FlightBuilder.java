@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Factory class to get sample list of flights.
  */
-class FlightBuilder {
+public class FlightBuilder {
     static List<Flight> createFlights() {
         LocalDateTime threeDaysFromNow = LocalDateTime.now().plusDays(3);
         return Arrays.asList(
@@ -30,7 +30,7 @@ class FlightBuilder {
                         threeDaysFromNow.plusHours(6), threeDaysFromNow.plusHours(7)));
     }
 
-    private static Flight createFlight(final LocalDateTime... dates) {
+    public static Flight createFlight(final LocalDateTime... dates) {
         if ((dates.length % 2) != 0) {
             throw new IllegalArgumentException("you must pass an even number of dates");
         }
