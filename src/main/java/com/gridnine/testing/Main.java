@@ -1,8 +1,11 @@
 package com.gridnine.testing;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("main");
+        List<Flight> flights = FlightBuilder.createFlights();
+        flights.forEach(System.out::println);
     }
 }
